@@ -1,0 +1,156 @@
+body{
+	background: #000;
+	text-align: center;
+	color: #eee;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #bbb;
+	text-decoration: none;
+}
+
+a.nocolour{
+	color: #eee;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+h3{
+	text-align: center;
+	padding: 0;
+	margin: -14px auto 0 auto;
+	background: black;
+	width: 350px;
+}
+.line{
+	border-top: 1px solid #fff;
+	margin: 10px;
+	padding: 0px;
+}
+
+#container{
+	width: 853px;
+	height:530px;
+	padding: 0;
+	margin: 0 auto 0 auto;
+	text-align: left;
+}
+
+.cover{
+	float: right;
+	margin: 0 0 0 20px;
+	border: 2px solid #fff;
+}
+
+.v1{
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+.tab {
+	margin-left: 40px;
+}
+
+#asplain{
+	font-family: Courier New, Courier, serif;
+	background: #000;
+	width: 600px;
+	filter:alpha(opacity=80);
+	opacity:0.8;
+}
+
+#asplain p{
+	padding: 20px;
+	filter:alpha(opacity=100);
+	opacity:1;
+	color: #fff;
+}
+
+
+#legal{
+	text-align: center;
+	margin: 40px auto 0 auto;
+}
+
+#smalltracks{
+	font-family: Courier New, Courier, serif;
+	margin: 0 auto 0 auto;
+	text-align: center;
+	background: #000;
+}
+
+#dewplayer-mini{
+	/*margin: -2px 0 0;*/
+	float: right;
+}
+
+#downloads{
+	width: 250px;
+	float: right;
+	padding: 0 10px;
+	
+}
+
+#high{
+	width: 120px;
+	border: 1px solid #ccc;
+	text-align: center;
+	background: white;
+	color: black;
+}
+
+#low{
+	float:right;
+	width: 120px;
+	border: 1px solid #ccc;
+	text-align: center;
+	background: white;
+	color: black;
+}
+
+#flac{
+	width: 248px;
+	margin-top: 6px;
+	border: 1px solid #ccc;
+	text-align: center;
+	background: white;
+	color: black;
+}
+
+#high:hover, #low:hover, #flac:hover{
+	background: #ccc;
+	text-decoration: none;
+}
+#downloads a:hover{
+	text-decoration: none;
+}
+
+.line{border-top: 1px solid #ccc;margin: 5px 0 5px 0;}
+
+.track{
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.track .number{
+	float: left;
+	font-size: 3em;
+	color: #777;
+	width: 40px;
+}	
+
+.track .title{
+	font-size: 2em;
+}
+
+.track .dR{
+	float: right;
+	width: 340px;
+}
+
+.track .dL{
+	width: 380px;
+}
