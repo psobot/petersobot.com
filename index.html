@@ -10,10 +10,29 @@
 				font-family: "Comic Sans MS", Helvetica, sans-serif;
 			}
 
+			.float-video {
+				font-size: 13px;
+			}
+
+			.float-video p {
+				margin: 10px 0 0;
+				text-align: right;
+			}
+
+			.small-and-grey {
+				font-size: 12px;
+				color: #888;
+			}
+
 			@media screen and (min-width: 768px) {
 				body {
 					width: 740px;
 					margin: 20px auto;
+				}
+
+				.float-video {
+					float: right;
+					width: 240px;
 				}
 			}
 
@@ -36,6 +55,12 @@
 
 			body > ul > li {
 				margin-bottom: 1.4em;
+			}
+
+			body > ul > li > p {
+				display: inline-block;
+				margin: 0;
+				vertical-align: top;
 			}
 
 			body > ul > li > ul li {
@@ -72,13 +97,30 @@
 			_gaq.push(['_setAccount', 'UA-6427057-4']);
 			_gaq.push(['_trackPageview']);
 			(function() {
-			 	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			 	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 		</script>
 	</head>
 	<body>
+		<div class="float-video">
+			<iframe
+				width="100%"
+				height="136"
+				src="https://www.youtube.com/embed/WhXgpkQ8E-Q?showinfo=0"
+				frameborder="0"
+				allowfullscreen></iframe>
+			<p>
+				"How Shazam Works"
+				<br />
+				<span class='small-and-grey'>
+					from <a href="http://www.meetup.com/Papers-We-Love-Toronto" target="_blank">Papers We Love Toronto</a>
+					<br />
+					September 2, 2015
+				</span>
+			</p>
+		</div>
 		<h1>peter sobot</h1>
 		<blockquote>
 			beep boop
@@ -131,6 +173,19 @@
 				<a target="_blank" href="mailto:lots_of_spam@petersobot.com">lots_of_spam@petersobot.com</a> via regular email
 				<br />
 				<small>or <a target="_blank" href="mailto:updog@petersobot.com">updog@petersobot.com</a> if you're not spambot</small>
+			</li>
+		</ul>
+
+		<h2 id="talks"><a href="#talks">talks &amp; presentations</a></h2>
+		<ul class="compressed">
+			<li class="star">
+				<p>
+					<a href="https://www.youtube.com/watch?v=WhXgpkQ8E-Q" target="_blank">An Industrial-Strength Audio Search Algorithm</a>
+					<br />
+					<span class="small-and-grey">
+						presented at <a href="http://www.meetup.com/Papers-We-Love-Toronto" target="_blank">Papers We Love Toronto</a> on September 2nd, 2015
+					</span>
+				<p>
 			</li>
 		</ul>
 
