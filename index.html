@@ -71,18 +71,35 @@
 				margin-bottom: 0.5em;
 			}
 
-			li.star {
+			ul.starry li {
+				margin-left: 2px;
+			}
+
+			ul.starry li.star {
 				list-style-type: none;
 				margin-left: -1.4em;
 			}
 
-			li.star:before {
+			ul.starry li.star:before {
 				content: "\2605";
 				margin-right: 0.4em;
 			}
 
+			ul.starry li > a, ul.starry li > p {
+				margin-left: 3px;
+			}
+
+			ul.starry li.star > a, ul.starry li.star > p {
+				margin-left: 0;
+			}
+
 			small {
-				color: #777;
+				color: #888;
+			}
+
+			span.date {
+				float: right;
+				color: #888;
 			}
 
 			marquee {
@@ -177,8 +194,9 @@
 		</ul>
 
 		<h2 id="talks"><a href="#talks">talks &amp; presentations</a></h2>
-		<ul class="compressed">
+		<ul class="compressed starry">
 			<li class="star">
+			<span class='date'>September 2015</span>
 				<p>
 					<a href="https://www.youtube.com/watch?v=WhXgpkQ8E-Q" target="_blank">An Industrial-Strength Audio Search Algorithm</a>
 					<br />
@@ -190,37 +208,127 @@
 		</ul>
 
 		<h2 id="writings"><a href="#writings">writings</a></h2>
-		<ul class="compressed">
-			<li class="star"><a href="http://blog.petersobot.com/scaling-deepdream">A DeepDream Web Service for $5 a Month</a> (July 2015)</li>
-			<li class="star"><a href="http://blog.petersobot.com/the-cost-of-waterloo-software-engineering">The Cost of Waterloo Software Engineering</a> (September 2014)</li>
-			<li><a href="http://blog.petersobot.com/the-holiday-party-hack">The Holiday Party Hack</a> (December 2013)</li>
-			<li class="star"><a href="http://blog.petersobot.com/the-architecture-of-an-infinite-stream-of-music">The Architecture of an Infinite Stream of Music</a> (November 2013)</li>
-			<li><a href="http://blog.petersobot.com/co-working-at-the-working-group">Co-Working at The Working Group</a> (October 2013)</li>
-			<li><a href="http://blog.petersobot.com/shared-state-and-customer-confusion">Shared State and Customer Confusion</a> (August 2013)</li>
-			<li class="star"><a href="http://blog.petersobot.com/pipes-and-filters">Pipes and Filters</a> (August 2013)</li>
-			<li><a href="http://blog.petersobot.com/dangerously-convenient-apis">Dangerously Convenient APIs</a> (April 2013)</li>
-			<li class="star"><a href="http://blog.petersobot.com/interns-are-leading-the-way">Interns are Leading the Way</a> (January 2013)</li>
-			<li><a href="http://blog.petersobot.com/emergency-bandwidth-distribution">Emergency Bandwidth Distribution</a> (November 2012)</li>
-			<li><a href="http://blog.petersobot.com/introducing-forever-fm">Introducing forever.fm</a> (November 2012)</li>
-			<li class="star"><a href="http://blog.petersobot.com/rewriting-in-cpp-for-fun-speed-and-masochism">Rewriting in C++ for Fun, Speed and Masochism</a> (October 2012)</li>
-			<li><a href="http://blog.petersobot.com/the-ubiquitous-capture-device">The Ubiquitous Capture Device</a> (June 2012)</li>
-			<li><a href="http://blog.petersobot.com/using-eight-cores-incorrectly-with-python">Using Eight Cores (incorrectly) with Python</a> (May 2012)</li>
-			<li><a href="http://blog.petersobot.com/a-site-for-dinner">A Site For Dinner</a> (May 2012)</li>
-			<li class="star"><a href="http://blog.petersobot.com/startups-bands-for-hackers">Startups: Bands for Hackers</a> (April 2012)</li>
-			<li><a href="http://blog.petersobot.com/a-use-for-smartphone-photos">A Use for Smartphone Photos</a> (April 2012)</li>
-			<li><a href="http://blog.petersobot.com/software-art-music-and-games">Software, Art, Music, and Games</a> (February 2012)</li>
-			<li><a href="http://blog.petersobot.com/form-vs-function">The middle ground between form and function</a> (January 2012)</li>
-			<li><a href="http://blog.petersobot.com/hyper-local-tweets">&ldquo;The Street Preacher&rdquo; - A Hyper-Local Twitter Bot</a> (November 2011)</li>
-			<li><a href="http://blog.petersobot.com/the-wub-machine-v20">More Lessons from The Wub Machine</a> (November 2011)</li>
-			<li class="star"><a href="http://blog.petersobot.com/the-wub-machine-post-mortem">The Wub Machine, Postmortem</a> (June 2011)</li>
-			<li><a href="http://blog.petersobot.com/the-wub-machine-revisited">The Wub Machine, Revisited</a> (June 2011)</li>
-			<li><a href="http://blog.petersobot.com/the-wub-machine">The Wub Machine</a> (May 2011)</li>
-			<li><a href="http://blog.petersobot.com/music-workflow">A Better Music Workflow?</a> (March 2011)</li>
-			<li><a href="http://blog.petersobot.com/pushed-to-my-pocket">Pushed to my Pocket</a> (January 2011)</li>
-			<li><a href="http://blog.petersobot.com/what-ive-learned-in-2a">What a difference four months makes...</a> (January 2011)</li>
-			<li><a href="http://blog.petersobot.com/macbook-two-hard-drives">Macbook &amp; Two Hard Drives</a> (December 2010)</li>
-			<li><a href="http://blog.petersobot.com/ohlife-and-online-privacy">OhLife and Online Privacy</a> (December 2010)</li>
-			<li><a href="http://blog.petersobot.com/live-status-updates-in-php">Live Status Updates with PHP</a> (December 2010)</li>
+		<ul class="compressed starry">
+			<li class="star">
+				<a href="http://blog.petersobot.com/scaling-deepdream">A DeepDream Web Service for $5 a Month</a>
+				<span class='date'>July 2015</span>
+			</li>
+			<li class="star">
+				<a href="http://blog.petersobot.com/the-cost-of-waterloo-software-engineering">The Cost of Waterloo Software Engineering</a>
+				<span class='date'>September 2014</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/the-holiday-party-hack">The Holiday Party Hack</a>
+				<span class='date'>December 2013</span>
+			</li>
+			<li class="star">
+				<a href="http://blog.petersobot.com/the-architecture-of-an-infinite-stream-of-music">The Architecture of an Infinite Stream of Music</a>
+				<span class='date'>November 2013</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/co-working-at-the-working-group">Co-Working at The Working Group</a>
+				<span class='date'>October 2013</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/shared-state-and-customer-confusion">Shared State and Customer Confusion</a>
+				<span class='date'>August 2013</span>
+			</li>
+			<li class="star">
+				<a href="http://blog.petersobot.com/pipes-and-filters">Pipes and Filters</a>
+				<span class='date'>August 2013</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/dangerously-convenient-apis">Dangerously Convenient APIs</a>
+				<span class='date'>April 2013</span>
+			</li>
+			<li class="star">
+				<a href="http://blog.petersobot.com/interns-are-leading-the-way">Interns are Leading the Way</a>
+				<span class='date'>January 2013</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/emergency-bandwidth-distribution">Emergency Bandwidth Distribution</a>
+				<span class='date'>November 2012</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/introducing-forever-fm">Introducing forever.fm</a>
+				<span class='date'>November 2012</span>
+			</li>
+			<li class="star">
+				<a href="http://blog.petersobot.com/rewriting-in-cpp-for-fun-speed-and-masochism">Rewriting in C++ for Fun, Speed and Masochism</a>
+				<span class='date'>October 2012</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/the-ubiquitous-capture-device">The Ubiquitous Capture Device</a>
+				<span class='date'>June 2012</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/using-eight-cores-incorrectly-with-python">Using Eight Cores (incorrectly) with Python</a>
+				<span class='date'>May 2012</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/a-site-for-dinner">A Site For Dinner</a>
+				<span class='date'>May 2012</span>
+			</li>
+			<li class="star">
+				<a href="http://blog.petersobot.com/startups-bands-for-hackers">Startups: Bands for Hackers</a>
+				<span class='date'>April 2012</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/a-use-for-smartphone-photos">A Use for Smartphone Photos</a>
+				<span class='date'>April 2012</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/software-art-music-and-games">Software, Art, Music, and Games</a>
+				<span class='date'>February 2012</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/form-vs-function">The middle ground between form and function</a>
+				<span class='date'>January 2012</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/hyper-local-tweets">&ldquo;The Street Preacher&rdquo; - A Hyper-Local Twitter Bot</a>
+				<span class='date'>November 2011</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/the-wub-machine-v20">More Lessons from The Wub Machine</a>
+				<span class='date'>November 2011</span>
+			</li>
+			<li class="star">
+				<a href="http://blog.petersobot.com/the-wub-machine-post-mortem">The Wub Machine, Postmortem</a>
+				<span class='date'>June 2011</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/the-wub-machine-revisited">The Wub Machine, Revisited</a>
+				<span class='date'>June 2011</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/the-wub-machine">The Wub Machine</a>
+				<span class='date'>May 2011</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/music-workflow">A Better Music Workflow?</a>
+				<span class='date'>March 2011</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/pushed-to-my-pocket">Pushed to my Pocket</a>
+				<span class='date'>January 2011</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/what-ive-learned-in-2a">What a difference four months makes...</a>
+				<span class='date'>January 2011</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/macbook-two-hard-drives">Macbook &amp; Two Hard Drives</a>
+				<span class='date'>December 2010</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/ohlife-and-online-privacy">OhLife and Online Privacy</a>
+				<span class='date'>December 2010</span>
+			</li>
+			<li>
+				<a href="http://blog.petersobot.com/live-status-updates-in-php">Live Status Updates with PHP</a>
+				<span class='date'>December 2010</span>
+			</li>
 		</ul>
 		<hr />
 
