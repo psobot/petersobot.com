@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html><!--
+		Hand-coded HTML/CSS resume by Peter Sobot
+	--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Peter Sobot - Résumé</title>
+
+		<link href="./index_files/css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+			/* latin-ext */
+			@font-face {
+			  font-family: 'Molengo';
+			  font-style: normal;
+			  font-weight: 400;
+			  src: local('Molengo'), local('Molengo-Regular'), url(http://fonts.gstatic.com/s/molengo/v7/kgOvbhnfvvz-SzWFqm1Q_lKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+			  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+			}
+			/* latin */
+			@font-face {
+			  font-family: 'Molengo';
+			  font-style: normal;
+			  font-weight: 400;
+			  src: local('Molengo'), local('Molengo-Regular'), url(http://fonts.gstatic.com/s/molengo/v7/ZJwfnC-l1l4p6xeI2T_NqgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+			  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+			}
+
+			body{
+				color: #222;
+				margin: 10px 0 0 0;
+				padding: 0;
+				font-size: 1em;
+				font-family: "Molengo", "Helvetica Neue Light", "Arial", sans-serif;
+			}
+			h1 {
+				font-family: "Bungee Shade";
+				margin: 0;
+			}
+			a {
+				text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #ccc;
+			}
+			.grey a, a.grey, .grey a:visited {
+				color: #aaa;
+				border-bottom: 1px dashed #ddd;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			a:visited {
+				color: #333;
+			}
+			.small {
+				font-size: 0.8em;
+			}
+			#title {
+				padding: 10px 0 0 20px;
+				height: 90px;
+				width: 100%;
+				text-align: left;
+				font-size: 40px;
+				line-height: 60px;
+				display: block;
+				z-index: 1;
+			}
+			#centerish {
+				position: absolute;
+				right: 0;
+				left: 475px;
+				top: 24px;
+				font-size: 2em;
+				text-align: center;
+			}
+			#rightish {
+				position: absolute;
+				right: 28px;
+				top: 10px;
+				text-align: right;
+			}
+			#container {
+				width: 1000px;
+				margin: 0 auto;
+				position: relative;
+				border: 1px solid transparent;
+			}
+			#left {
+				width: 200px;
+				position: relative;
+				float: left;
+				display: block;
+				text-align: center;
+				padding: 0 30px 40px 20px;
+				overflow: hidden;
+				z-index: 1;
+				line-height: 1.35em;
+			}
+			#left #printlogo{
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				overflow: hidden;
+				width: 250px;
+				height: 1100px;
+			}
+			#left #printlogo img{
+				width: 250px;
+				z-index: 2;
+				border: none;
+				outline: none;
+				font-size: 50px;
+				position: relative;
+			}
+			#left #ontop{
+				z-index: 3;
+				display: block;
+				position: relative;
+			}
+			#right {
+				width: 730px;
+				min-height: 500px;
+				margin: 0 0 0 250px;
+				line-height: 1.3em;
+			}
+			.grey {
+				color: #aaa;
+			}
+			.left{
+				float: left;
+				display: block;
+				margin-right: 20px;
+				width: 80px;
+				min-height: 10px;
+			}
+			ul {
+				padding: 0 0 0 25px;
+				margin: 0 0 20px 0;
+				font-size: 11pt;
+			}
+			li {
+				font-size: 11pt;
+			}
+			ul ul {
+				margin: 0;
+			}
+			.indent{
+				margin-left: 25px;
+			}
+			.writing {
+				text-align: center;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id="container">
+			<div id="title"><h1>Peter Sobot</h1></div>
+			<div id="centerish">
+				👋
+			</div>
+			<div id="rightish">
+				<span style="font-size: 15pt">
+					<a href="https://petersobot.com/" target="_blank" title="Visit my website!">https://petersobot.com</a><br />
+					<a href="mailto:hire@petersobot.com" title="Email me!">hire@petersobot.com</a><br />
+          <!-- Phone number used to go here. Too much spam. --><br />
+				</span>
+			</div>
+			<div id="left">
+				<div id="ontop">
+					<span class="grey">📽 I've given talks about:</span><br />
+    			<br />
+    			<div class="writing">
+      			<a href="https://www.youtube.com/watch?v=WhXgpkQ8E-Q">How the Shazam audio fingerprinting algorithm works (60 min)</a><br /><span class='grey'>Papers We Love Toronto</span>
+      			<br />
+      			•
+      			<br />
+      			<a href="https://www.youtube.com/watch?v=l3tkAbsJ_9U"><i>Words are Hard - Talking Good via Computer (30 min)</i></a><br /><span class='grey'>CUSEC 2017</span>
+      			<br />
+      			•
+      			<br />
+      			<a href="https://speakerdeck.com/psobot/intro-to-the-tech-world"><i>An Intro to the Tech World</i></a><br /><span class='grey'>Bitmaker Labs</span>
+      			<br />
+      			<br />
+      		</div>
+      		<br />
+					<span class="grey"><a href="https://github.com/psobot" target="_blank">🛠 I've built software with:</a></span><br />
+					<br />
+					Ruby • Python • Go • Swift<br />
+					Java • Objective-C • C++<br />
+					Scala • C • Javascript/ES6<br />
+					HTML • CSS<br />
+					<br />
+          iOS • macOS • watchOS<br />
+          Android • Linux (Ubuntu)<br />
+					Vim • Git • Xcode<br />
+					<br />
+					Agile • Scrum • Kanban<br />
+					<br />
+					Bash • Apache • Nginx<br />
+					Puppet • Chef • Nagios/Icinga<br />
+          AWS	• Vagrant<br />
+          New Relic	• Datadog<br />
+          PagerDuty	• Bugsnag<br />
+					<br />
+      			<span class="grey"><a href="http://blog.petersobot.com/" target="_blank">📝 I've written about:</a></span><br />
+      			<br />
+      			<div class="writing">
+        			<a href="http://petersobot.com/blog/pipes-and-filters/">Using Pipes and Filters to Build Better Software</a>
+        			•
+        			<a href="http://petersobot.com/blog/the-architecture-of-an-infinite-stream-of-music/">Architecting an Infinite Stream of Music</a>
+        			•
+        			<a href="http://petersobot.com/blog/emergency-bandwidth-distribution/">Inexpensive Bandwidth Distribution Strategies</a>
+        			•
+        			<a href="http://petersobot.com/blog/rewriting-in-cpp-for-fun-speed-and-masochism/">Smart Image Cropping in Ruby and C++</a>
+        			•
+        			<a href="http://petersobot.com/blog/introducing-forever-fm/">Streaming MP3 in Python</a>
+        			•
+        			<a href="http://petersobot.com/blog/introducing-forever-fm/">Memory Leaks in Python C Extensions</a>
+        			•
+        			<a href="http://petersobot.com/blog/using-eight-cores-incorrectly-with-python/">Deadlocks in Python</a>
+        			•
+        			<a href="http://petersobot.com/blog/dangerously-convenient-apis/">Reducing Reliance on Third-Party APIs</a>
+        		</div>
+					<br />
+					<span class="grey">
+						<em>
+							<a href="https://linkedin.com/in/psobot" target="_blank">
+								See my LinkedIn profile for more work history, including internships at Capcom Game Studio Vancouver, The Working Group, and Imagination Plus.
+							</a>
+						</em>
+					</span>
+				</div>
+			</div>
+			<div id="right">
+				<span style="font-size: 1.1em">
+					I'm a generalist software engineer with a passion for building delightful software that scales.
+				</span>
+				<br />
+				<br />
+				💡 <span style="text-decoration: underline">Areas of Expertise</span>:<br />
+				<div class="line"><div class="grey left">Languages:</div>Ruby, Python, Swift, Objective-C, Scala, Java, Go, C++, Javascript, SQL</div>
+				<div class="line"><div class="grey left">Frameworks:</div>Ruby on Rails, Ember.JS, Play, Express, Tornado, Cocoa, Android SDK</div>
+				<br />
+        👔 <span style="text-decoration: underline">Experience</span>:<br />
+        Senior Software Engineer III at <a href="https://www.pagerduty.com/" target="_blank">PagerDuty</a> <span class="grey">in Toronto, Canada (November 2016-present)</span><br />
+				<ul>
+					<li>Provided technical direction, design input, mentorship and engineering work to Incident Management team</li>
+					<li>Authored and deployed code contributions to 33 projects in 10 languages (primarily Ruby, Javascript, and Swift)</li>
+          <li>
+          	Won 9 of 12 monthly engineering hack days in 2016 with projects including:
+          	<ul>
+          		<li><a href="https://www.pagerduty.com/blog/oncallselfie" target="_blank">#oncallselfie</a>, native Twitter integration for PagerDuty's iOS and Android apps</li>
+          		<li><a href="https://www.pagerduty.com/blog/features-html-emails" target="_blank">Rich HTML Email support</a> for hundreds of thousands of PagerDuty users</li>
+          		<li>Internal real-time display of outgoing pages with Go, Kafka, WebSockets &amp; WebGL</li>
+          		<li>PagerDuty's <a href="https://itunes.apple.com/us/app/pagerduty/id594039512?mt=8" target="_blank">watchOS app</a> for displaying on-call status and scheduling on your wrist</li>
+          		<li><a href="https://www.pagerduty.com/blog/addition-revert-schedule/" target="_blank">Versioning and undo</a> for PagerDuty's on-call scheduling service</li>
+          	</ul>
+          </li>
+					<li>Fastest progression from entry-level to senior engineer in company history (21 months)</li>
+        </ul>
+        Software Engineer II at <a href="https://www.pagerduty.com/" target="_blank">PagerDuty</a> <span class="grey">in Toronto, Canada (October 2015-November 2016)</span><br />
+				<ul>
+					<li>Core contributor for product improvements on Workflow and Incident Management: Systems teams</li>
+					<li>Spearheaded efforts to reduce ZooKeeper lock contention, increasing overall throughput by multiple orders of magnitude and enabling future customer growth</li>
+					<li>Mentored and onboarded 2 interns and 3 new full-time employees</li>
+        </ul>
+        Software Engineer I at <a href="https://www.pagerduty.com/" target="_blank">PagerDuty</a> <span class="grey">in Toronto, Canada (February 2015-October 2015)</span><br />
+				<ul>
+					<li>Helped ship core product enhancements including Incident Snooze and Incident Urgencies</li>
+          <li>Ensured reliability and uptime of PagerDuty by participating in primary on-call rotations</li>
+          <li>Interviewed dozens of engineering and UX candidates for full-time and intern positions</li>
+        </ul>
+				Entrepreneur in Residence at <a href="http://www.twg.ca/" target="_blank">The Working Group</a> <span class="grey">in Toronto, Canada (June 2014-February 2015)</span><br />
+				<ul>
+					<li>Directed TWG Labs, a company division focused on experiments, learning and tools</li>
+  				<li>Managed between 1-4 developers on internet-of-things projects (Raspberry Pi, iBeacons, NodeJS and Heroku)</li>
+  				<li>Built bleeding-edge product prototypes for national Canadian brands including Tim Hortons</li>
+					<li>Led development efforts on Mobius, a real-time internal project management tool in Node.JS and AngularJS</li>
+        </ul>
+				Founder &amp; Lead Developer at <a href="http://appstruments.com/" target="_blank">Appstruments</a> <span class="grey">in Toronto, Canada (2011-2014)</span>
+				<ul>
+          <li>Crafted viral music apps for the web, Android and iOS:</li>
+          	<ul>
+          		<li><em><a href="https://the.wubmachine.com/">the Wub Machine</a></em>, an automatic music remixer used to make nearly 3 million remixes</li>
+          		<li><em><a href="http://forever.fm/">forever.fm</a></em>, an endless, automatic &amp; beatmatched radio station</li>
+          	</ul>
+          <li>Created architecture to scale to 60k unique users per month with minimal cost while in school</li>
+				</ul>
+
+Infrastructure Engineering Intern at <a href="https://inkling.com/" target="_blank">Inkling Systems, Inc.</a> <span class="grey">in San Francisco, California (Winter 2013)</span>
+				<ul>
+          <li>Wrote and maintained infrastructure software to manage Inkling's AWS-based cloud</li>
+          <li>Created redundant &amp; isolated demo environment for key external product launch</li>
+          <li>Participated in first-line on-call rotation with PagerDuty to keep services running 24/7</li>
+				</ul>
+
+        🎓 <span style="text-decoration: underline">Education</span>:<br />
+
+				Bachelor of Software Engineering (with distinction) from the <a href="http://www.uwaterloo.ca/">University of Waterloo</a> <span class="grey">(Graduated 2014)</span>
+				<ul>
+					<li>Built <a href="http://mixbox.io/">MixBox</a>, an iPad music remixing app based on the Echo Nest's <em>Remix</em> API</li>
+					<li>Resident of <a href="http://velocity.uwaterloo.ca/">VeloCity Startup Incubator</a> <span class="grey">(2010-2014)</span></li>
+					<li>
+						Created JoosBox, a compiler for <a href="https://www.student.cs.uwaterloo.ca/~cs444/joos.html" target="_blank">a large subset of Java</a> in Scala <span class="grey">(Winter 2014, team of 3)</span><br />
+					</li>
+					<li>
+						Developed BrOS, a simple operating system for the ARM Cortex-M3 <span class="grey">(Winter 2012, team of 3)</span><br />
+					</li>
+					<li>
+						"<a href="https://github.com/psobot/colourl" target="_blank">Colour of the Web</a>," finding the average colour of the internet <span class="grey">(Fall 2010, group of 2)</span><br />
+					</li>
+				</ul>
+				🎼 <span style="text-decoration: underline">Activities &amp; Interests</span>:<br />
+				<span class='small' style="line-height: 0.9em;">
+					<a href="http://music.petersobot.com/" target="_blank">
+						Music Composition, Performance, and Production (Drums, Bass, Guitar, Piano)
+					</a>•
+					<a href="http://music.petersobot.com/" target="_blank">
+						Electronic Music Production
+					</a>•
+					<a href="https://instagram.com/psobot">Photography</a> •
+					<a href="https://twitter.com/psobot">Weird Twitter</a> •
+					<a href="https://twitter.com/psobot">Regular Twitter</a> •
+					Artistic Visual Programming •
+					Modular Synthesis •
+					Hardware Hacking •
+					Building Custom Game Boy Cartridges for Music Playback •
+					Security &amp; Penetration Testing •
+					Socks •
+					Excessive Usage of 😀 Emoji and <span style="font-family: 'Comic Sans MS'">Comic Sans</span>
+				</span>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			try {
+			var pageTracker = _gat._getTracker("UA-6427057-4");
+			pageTracker._trackPageview();
+			} catch(err) {}
+		</script><script src="./index_files/ga.js" type="text/javascript"></script>
+</body></html>
