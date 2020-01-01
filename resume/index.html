@@ -1,345 +1,536 @@
 <!DOCTYPE html>
-<html><!--
-		Hand-coded HTML/CSS resume by Peter Sobot
-	--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Peter Sobot - Résumé</title>
+<html>
+  <!--
+    Hand-coded HTML/CSS resume by Peter Sobot
+  -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Peter Sobot - Résumé</title>
 
-		<link href="./index_files/css" rel="stylesheet" type="text/css">
-		<style type="text/css">
-			@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
-			/* latin-ext */
-			@font-face {
-			  font-family: 'Molengo';
-			  font-style: normal;
-			  font-weight: 400;
-			  src: local('Molengo'), local('Molengo-Regular'), url(http://fonts.gstatic.com/s/molengo/v7/kgOvbhnfvvz-SzWFqm1Q_lKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
-			  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-			}
-			/* latin */
-			@font-face {
-			  font-family: 'Molengo';
-			  font-style: normal;
-			  font-weight: 400;
-			  src: local('Molengo'), local('Molengo-Regular'), url(http://fonts.gstatic.com/s/molengo/v7/ZJwfnC-l1l4p6xeI2T_NqgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
-			  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-			}
+    <link href="./index_files/css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
 
-			body{
-				color: #222;
-				margin: 10px 0 0 0;
-				padding: 0;
-				font-size: 1em;
-				font-family: "Molengo", "Helvetica Neue Light", "Arial", sans-serif;
-			}
-			h1 {
-				font-family: "Bungee Shade";
-				margin: 0;
-			}
-			a {
-				text-decoration: none;
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
+      body{
+        color: #222;
+        margin: 10px 0 0 0;
+        padding: 0;
+        font-size: 1em;
+        font-family: "Merriweather", "Helvetica Neue Light", "Arial", sans-serif;
+        line-height: 1.1em;
+      }
+      h1 {
+        font-family: "Bungee Shade";
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+            color: #333;
+            border-bottom: 1px solid #ccc;
+      }
+      .grey a, a.grey, .grey a:visited {
+        color: #aaa;
+        border-bottom: 1px dashed #ddd;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      a:visited {
         color: #333;
-        border-bottom: 1px solid #ccc;
-			}
-			.grey a, a.grey, .grey a:visited {
-				color: #aaa;
-				border-bottom: 1px dashed #ddd;
-			}
-			a:hover {
-				text-decoration: underline;
-			}
-			a:visited {
-				color: #333;
-			}
-			.small {
-				font-size: 0.8em;
-			}
-			#title {
-				padding: 10px 0 0 20px;
-				height: 90px;
-				width: 100%;
-				text-align: left;
-				font-size: 40px;
-				line-height: 60px;
-				display: block;
-				z-index: 1;
-			}
-			#centerish {
-				position: absolute;
-				right: 0;
-				left: 475px;
-				top: 24px;
-				font-size: 2em;
-				text-align: center;
-			}
-			#rightish {
-				position: absolute;
-				right: 28px;
-				top: 10px;
-				text-align: right;
-			}
-			#container {
-				width: 1000px;
-				margin: 0 auto;
-				position: relative;
-				border: 1px solid transparent;
-			}
-			#left {
-				width: 200px;
-				position: relative;
-				float: left;
-				display: block;
-				text-align: center;
-				padding: 0 30px 40px 20px;
-				overflow: hidden;
-				z-index: 1;
-				line-height: 1.35em;
-			}
-			#left #printlogo{
-				position: absolute;
-				top: 0;
-				left: 0;
-				display: block;
-				overflow: hidden;
-				width: 250px;
-				height: 1100px;
-			}
-			#left #printlogo img{
-				width: 250px;
-				z-index: 2;
-				border: none;
-				outline: none;
-				font-size: 50px;
-				position: relative;
-			}
-			#left #ontop{
-				z-index: 3;
-				display: block;
-				position: relative;
-			}
-			#right {
-				width: 730px;
-				min-height: 500px;
-				margin: 0 0 0 250px;
-				line-height: 1.3em;
-			}
-			.grey {
-				color: #aaa;
-			}
-			.left{
-				float: left;
-				display: block;
-				margin-right: 20px;
-				width: 80px;
-				min-height: 10px;
-			}
-			ul {
-				padding: 0 0 0 25px;
-				margin: 0 0 20px 0;
-				font-size: 11pt;
-			}
-			li {
-				font-size: 11pt;
-			}
-			ul ul {
-				margin: 0;
-			}
-			.indent{
-				margin-left: 25px;
-			}
-			.writing {
-				text-align: center;
-			}
-		</style>
+      }
+      .small {
+        font-size: 0.8em;
+      }
+      #title {
+        padding: 10px 0 0 20px;
+        height: 90px;
+        width: 100%;
+        text-align: left;
+        font-size: 40px;
+        line-height: 60px;
+        display: block;
+        z-index: 1;
+      }
+      #centerish {
+        position: absolute;
+        right: 0;
+        left: 425px;
+        top: 40px;
+        font-size: 2em;
+        text-align: center;
+      }
+      #rightish {
+        position: absolute;
+        right: 28px;
+        top: 10px;
+        text-align: right;
+      }
+      #container {
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid transparent;
+      }
+      #center {
+        width: 100%;
+        min-height: 500px;
+        margin: 0 0 0 0;
+        line-height: 1.8em;
+      }
+      .section {
+        margin-bottom: 50px;
+      }
+      .section-title {
+        font-weight: 900;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+      .section-contents {
 
-	</head>
-	<body>
-		<div id="container">
-			<div id="title"><h1>Peter Sobot</h1></div>
-			<div id="centerish">
-				👋
-			</div>
-			<div id="rightish">
-				<span style="font-size: 15pt">
-					<a href="https://petersobot.com/" target="_blank" title="Visit my website!">https://petersobot.com</a><br />
-					<a href="mailto:hire@petersobot.com" title="Email me!">hire@petersobot.com</a><br />
-          <!-- Phone number used to go here. Too much spam. --><br />
-				</span>
-			</div>
-			<div id="left">
-				<div id="ontop">
-					<span class="grey">📽 I've given talks about:</span><br />
-    			<br />
-    			<div class="writing">
-      			<a href="https://www.youtube.com/watch?v=WhXgpkQ8E-Q">How the Shazam audio fingerprinting algorithm works (60 min)</a><br /><span class='grey'>Papers We Love Toronto</span>
-      			<br />
-            •
-            <br />
-            <a href="https://www.youtube.com/watch?v=807uHC0Ia10">Building Spotify's music recommender systems on Google Cloud (30 min)</a><br /><span class='grey'>Google Next 2019</span>
-            <br />
-      			•
-      			<br />
-      			<a href="https://www.youtube.com/watch?v=l3tkAbsJ_9U"><i>Words are Hard - Talking Good via Computer (30 min)</i></a><br /><span class='grey'>CUSEC 2017</span>
-      			<br />
-      		</div>
-      		<br />
-					<span class="grey"><a href="https://github.com/psobot" target="_blank">🛠 I've built software with:</a></span><br />
-					<br />
-					Python • Scala • Java • C<br />
-					Go • Swift • Objective-C<br />
-					C++ • Scala • JavaScript<br />
-					HTML • CSS • SQL<br />
-					<br />
-          iOS • macOS • watchOS<br />
-          Android • Linux<br />
-					Vim • Git • Xcode<br />
-					<br />
-					Agile • Scrum • Kanban<br />
-					<br />
-					Bash • Nginx<br />
-					Puppet • Chef<br />
-          GCP • AWS	• Docker<br />
-          New Relic	• Datadog<br />
-          PagerDuty	• Sentry<br />
-					<br />
-    			<span class="grey"><a href="http://blog.petersobot.com/" target="_blank">📝 I've written about:</a></span><br />
-    			<br />
-    			<div class="writing">
-            <a href="http://blog.petersobot.com/machine-learning-for-drummers">Machine Learning for Drummers</a>
-            •
-      			<a href="http://blog.petersobot.com/pipes-and-filters/">Using Pipes and Filters to Build Better Software</a>
-      			•
-      			<a href="http://blog.petersobot.com/the-architecture-of-an-infinite-stream-of-music/">Architecting an Infinite Stream of Music</a>
-      			•
-      			<a href="http://blog.petersobot.com/emergency-bandwidth-distribution/">Inexpensive Bandwidth Distribution Strategies</a>
-      			•
-      			<a href="http://blog.petersobot.com/rewriting-in-cpp-for-fun-speed-and-masochism/">Smart Image Cropping in Ruby and C++</a>
-      			•
-      			<a href="http://blog.petersobot.com/introducing-forever-fm/">Streaming MP3 in Python</a>
-      			•
-      			<a href="http://blog.petersobot.com/introducing-forever-fm/">Memory Leaks in Python C Extensions</a>
-      			•
-      			<a href="http://blog.petersobot.com/using-eight-cores-incorrectly-with-python/">Deadlocks in Python</a>
-      		</div>
-					<br />
-					<span class="grey">
-						<em>
-							<a href="https://linkedin.com/in/psobot" target="_blank">
-								See my LinkedIn profile for more work history, including internships at Inkling, Capcom Game Studio Vancouver, The Working Group, and Imagination Plus.
-							</a>
-						</em>
-					</span>
-				</div>
-			</div>
-			<div id="right">
-				<span style="font-size: 1.1em">
-					I'm a generalist software engineer with a passion for building delightful software that scales.
-				</span>
-				<br />
-				<br />
-				💡 <span style="text-decoration: underline">Areas of Expertise</span>:<br />
-				<div class="line"><div class="grey left">Languages:</div>Python, Java, Scala, Ruby, C, Swift, Objective-C, Go, C++, JavaScript, SQL</div>
-				<br />
-        👔 <span style="text-decoration: underline">Experience</span>:<br />
-        Staff Software Engineer at <a href="https://www.spotify.com/" target="_blank">Spotify</a> <span class="grey">in New York, New York (July 2019-Present)</span><br />
-        <ul>
-          <li>
-            Provided technical leadership, technical design, and code to the Personalization Platform team (~40 people)
+      }
+      .subsection {
+        margin-top: 20px;
+      }
+      .grey {
+        color: #888;
+      }
+      ul {
+        padding: 0 0 0 25px;
+        margin: 0 0 20px 0;
+        font-size: 11pt;
+      }
+      li {
+        font-size: 11pt;
+      }
+      ul ul {
+        margin: 0;
+      }
+      .monospace {
+        font-family: Inconsolata, 'Courier New', Courier, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="title"><h1>Peter Sobot</h1></div>
+      <div id="centerish">👋</div>
+      <div id="rightish">
+        <span style="font-size: 15pt">
+          <a href="https://petersobot.com/" target="_blank" title="Visit my website!">https://petersobot.com</a>
+          <br />
+          <br />
+          <a href="mailto:hire@petersobot.com" title="Email me!">hire@petersobot.com</a><br />
+                <!-- Phone number used to go here. Too much spam. --><br />
+        </span>
+      </div>
+
+      <div id="center">
+        <div style="font-size: 1.1em">
+          Generalist software engineer with a passion
+          for building highly performant systems
+          and growing others' careers.
+        </div>
+        <br />
+        <div class="section">
+          <div class="section-contents">
+            <div class="line">
+              <span class="grey">Languages of Choice:</span>
+              Python, Scala, C++, Java, Ruby, C, Objective-C, Go, JavaScript (TypeScript), Swift, SQL
+            </div>
+            <div class="line">
+              <span class="grey">Areas of Focus:</span>
+              Performance Optimization, Teaching, Mentorship, Audio Processing, Distributed Systems, Machine Learning
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            👔 <span style="text-decoration: underline">Work Experience</span>
+          </div>
+          <div class="section-contents">
+            <div class="subsection">
+              <div class="subsection-header">
+                Staff Machine Learning Engineer at
+                <a href="https://www.spotify.com/" target="_blank">Spotify</a>
+                <span class="grey">in New York, New York (February 2020-Present)</span>
+              </div>
+              <ul>
+                <li>
+                  Provided technical leadership to Spotify's Audio Intelligence (MIQ) research
+                  lab, which focuses on applying Machine Learning to audio
+                  <ul>
+                    <li>Built machine learning tooling and frameworks to increase research productivity by <strong>40x</strong> (experiments/quarter)</li>
+                    <li>Trained, optimized, and deployed machine learning models for music information retrieval and content identification</li>
+                    <li>First to deploy machine learning for audio processing on mobile devices at Spotify with TensorFlow Lite</li>
+                    <li>Designed, wrote, and released <a href="https://github.com/spotify/pedalboard" target="_blank">Pedalboard</a>, a high-performance Python library for audio effects with over 3,000 stars on GitHub</li>
+                    <li>Drove cost-optimization efforts to reduce cloud spend by millions of dollars per year</li>
+                    <li>Helped improve open source libraries including
+                      <a href="https://github.com/tensorflow/tensorflow/pulls?q=is%3Apr+is%3Aclosed+author%3Apsobot" target="_blank">TensorFlow</a>,
+                      <a href="https://github.com/tensorflow/datasets/pulls?q=is%3Apr+is%3Aclosed+author%3Apsobot" target="_blank">TensorFlow Datasets</a>,
+                      <a href="https://github.com/apache/beam/pulls?q=is%3Apr+is%3Aclosed+author%3Apsobot" target="_blank">Apache Beam</a>,
+                      and <a href="https://github.com/nmslib/hnswlib/pulls?q=is%3Apr+is%3Aclosed+author%3Apsobot" target="_blank">hnswlib</a>
+                    </li>
+                    <li>Temporarily acted as interim manager for 3 engineers and 5 research scientists <span style="font-style: italic;">and didn't get scared away from people management</span></li>
+                  </ul>
+                </li>
+                <li>Member of Spotify's company-wide incident response team, serving as the first line of defense for severe incidents and outages</li>
+                <li>Re-designed and re-implemented Spotify's internal approximate nearest-neighbour search library</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Staff Software Engineer at
+                <a href="https://www.spotify.com/" target="_blank">Spotify</a>
+                <span class="grey">in New York, New York (July 2019-February 2020)</span>
+              </div>
+              <ul>
+                <li>
+                  Provided technical leadership, software design, and code to the Personalization Platform team (~40 people)
+                  <ul>
+                    <li>Owned and maintained the core machine learning systems for music recommendation across all of Spotify</li>
+                    <li>Powered features including Home, <em>Discover Weekly</em>, <em>Daily Mix</em>, Radio, Suggested Songs, and <em>Fans Also Like</em></li>
+                    <li>
+                      Made contributions to open source libraries crucial to Spotify's recommender systems, including
+                      <a href="https://github.com/spotify/annoy">Annoy</a> and <a href="https://github.com/spotify/scio">Scio</a>
+                    </li>
+                    <li>Rewrote Spotify's core recommendation models to increase training speed by <strong>5x</strong></li>
+                  </ul>
+                </li>
+                <li>
+                  Focused on teaching, mentorship, and education
+                  <ul>
+                    <li>Led engineer onboarding bootcamp for all new US-based engineering hires</li>
+                    <li>Redesigned introductory engineering curriculum for all global engineering hires</li>
+                    <li>Mentored 7 engineers, resulting in 7 promotions</li>
+                  </ul>
+                </li>
+                <li>Gave dozens of internal and external talks to other teams, companies, and conferences across three continents</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Senior Backend Engineer at <a href="https://www.spotify.com/" target="_blank">Spotify</a>
+                <span class="grey">in New York, New York (May 2017-July 2019)</span>
+              </div>
+              <ul>
+                <li>Designed and implemented scalable backend services in Java for music recommendation and personalization</li>
+                <li>Built data pipelines in Scala and Python, processing hundreds of terabytes per day to serve 200m+ Spotify users</li>
+                <li>Won Spotify's internal company-wide hack week two years in a row (with projects sadly too secretive to list)</li>
+                <li>Led the Spotify NYC Musicians' club and ran bi-monthly <em>Friday Night Live</em> internal employee concert series</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Senior Software Engineer at <a href="https://www.pagerduty.com/" target="_blank">PagerDuty</a>
+                <span class="grey">in Toronto, Ontario (November 2016-April 2017)</span><br />
+              </div>
+              <ul>
+                <li>Provided technical direction, design input, mentorship and engineering work to Incident Management team</li>
+                <li>Authored and deployed code contributions to 34 projects in 10 languages (primarily Ruby, Javascript, and Swift)</li>
+                <li>
+                  Won 9 of 12 monthly engineering hack days in 2016 with projects including:
+                  <ul>
+                    <li><a href="https://www.pagerduty.com/blog/oncallselfie" target="_blank">#oncallselfie</a>, native Twitter integration for PagerDuty's iOS and Android apps</li>
+                    <li><a href="https://www.pagerduty.com/blog/features-html-emails" target="_blank">Rich HTML Email support</a> for hundreds of thousands of PagerDuty users</li>
+                    <li>Internal real-time display of outgoing notifications with Go, Kafka, WebSockets &amp; WebGL</li>
+                    <li>PagerDuty's <a href="https://itunes.apple.com/us/app/pagerduty/id594039512?mt=8" target="_blank">watchOS app</a> for displaying on-call status and scheduling on your wrist</li>
+                    <li><a href="https://www.pagerduty.com/blog/addition-revert-schedule/" target="_blank">Versioning and undo</a> for PagerDuty's on-call scheduling service</li>
+                  </ul>
+                </li>
+                <li>Fastest progression from entry-level to senior engineer in company history (21 months)</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Software Engineer II at <a href="https://www.pagerduty.com/" target="_blank">PagerDuty</a>
+                <span class="grey">in Toronto, Ontario (October 2015-November 2016)</span>
+              </div>
+              <ul>
+                <li>Core contributor for product improvements on Workflow and Incident Management: Systems teams</li>
+                <li>Spearheaded efforts to increase overall data throughput by 100x, enabling future customer growth</li>
+                <li>Mentored and onboarded 2 interns and 3 new full-time employees</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Software Engineer I at <a href="https://www.pagerduty.com/" target="_blank">PagerDuty</a>
+                <span class="grey">in Toronto, Ontario (February 2015-October 2015)</span>
+              </div>
+              <ul>
+                <li>Helped ship core product enhancements including Incident Snooze and Incident Urgencies</li>
+                <li>Ensured reliability and uptime of PagerDuty by participating in primary on-call rotations</li>
+                <li>Recorded, sang, and released the <a href="https://support.pagerduty.com/hc/en-us/articles/219534828">BarberDuty</a> ringtones, PagerDuty's <a href="https://twitter.com/mhoye/status/619169668738236417" target="_blank">on-call barbershop quartet</a> that wakes you up at night</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Entrepreneur in Residence at <a href="http://www.twg.ca/" target="_blank">The Working Group</a>
+                <span class="grey">in Toronto, Ontario (June 2014-February 2015)</span>
+              </div>
+              <ul>
+                <li>Directed TWG Labs, a company division focused on experiments, learning and tools</li>
+                <li>Managed a team of 3 developers on internet-of-things projects (Raspberry Pi, iBeacons, NodeJS and Heroku)</li>
+                <li>Built bleeding-edge product prototypes for national Canadian brands including Tim Hortons</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Founder &amp; Lead Developer at <a href="http://appstruments.com/" target="_blank">Appstruments</a>
+                <span class="grey">in Toronto, Ontario (2011-2014)</span>
+              </div>
+              <ul>
+                <li>
+                  Crafted viral music apps for the web, Android and iOS:
+                  <ul>
+                    <li>
+                      <em>
+                        <a href="https://the.wubmachine.com/">the Wub Machine</a>
+                      </em>,
+                        an automatic music remixer used to make nearly 5 million remixes
+                      </li>
+                    <li>
+                      <em>
+                        <a href="http://forever.fm/">forever.fm</a>
+                      </em>,
+                      an endless, automatic &amp; beatmatched radio station
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Infrastructure Software Engineering Intern at <a href="https://inkling.com/" target="_blank">Inkling</a>
+                <span class="grey">in San Francisco, California (2013)</span>
+              </div>
+              <ul>
+                <li>Rewrote Inkling's aging deployment system</li>
+                <li>Created a new onboarding process for engineers</li>
+                <li>Replicated Inkling's entire backend infrastructure for a business-critical, Apple-style product launch</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Software Engineering Intern at <a href="https://en.wikipedia.org/wiki/Capcom_Vancouver" target="_blank">Capcom Game Studio Vancouver</a>
+                <span class="grey">in Burnaby, British Columbia (2012)</span>
+              </div>
+              <ul>
+                <li>
+                  Finished Capcom's internal testing infrastructure for
+                  <a href="https://en.wikipedia.org/wiki/Dead_Rising_3"><em>Dead Rising 3</em></a>,
+                  a launch title for the <a href="https://en.wikipedia.org/wiki/Xbox_One">Xbox One</a>
+                </li>
+                <li>Created analytics tools using real-time gameplay data to aid game designers</li>
+                <li>
+                  Got my first (and only, so far)
+                  <a href="https://www.mobygames.com/developer/sheet/view/developerId,600391/">video game credit</a>
+                </li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Software Developer Co-op at <a href="https://twg.io" target="_blank">The Working Group (now Deloitte)</a>
+                <span class="grey">in Toronto, Ontario (2011)</span>
+              </div>
+              <ul>
+                <li>Rails and iOS development for a variety of clients and internal projects.</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header">
+                Web Developer Co-op at <a href="https://humancode.ca/" target="_blank">Imagination Plus (now Human_Code)</a>
+                <span class="grey">in Hamilton, Ontario (2009)</span>
+              </div>
+              <ul>
+                <li>PHP and JavaScript development. Led development of a custom PHP-driven learning management system.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            🎓 <span style="text-decoration: underline">Education</span>
+          </div>
+          <div class="section-contents">
+            Bachelor of Software Engineering (with distinction) from the
+            <a href="http://www.uwaterloo.ca/">University of Waterloo</a>
+            <span class="grey">(2009-2014)</span>
             <ul>
-              <li>Owned and maintained the core machine learning systems for music recommendation across all of Spotify</li>
-              <li>Powered features including Home, <em>Discover Weekly</em>, <em>Daily Mix</em>, Radio, Suggested Songs, and <em>Fans Also Like</em></li>
+              <li>
+                Resident of <a href="https://velocityincubator.com/" target="_blank">VeloCity</a>,
+                Waterloo's startup incubator residence
+              </li>
+              <li>
+                Built <a href="http://mixbox.io/">MixBox</a>, an iPad music remixing app
+                based on the Echo Nest's (now Spotify's) <em>Remix</em> API
+                <span class="grey">(2012-2014, team of 3)</span>
+              </li>
+              <li>
+                Wrote JoosBox, a compiler for
+                <a href="https://www.student.cs.uwaterloo.ca/~cs444/joos.html" target="_blank">a large subset of Java</a>
+                in Scala <span class="grey">(Winter 2014, team of 3)</span>
+              </li>
+              <li>
+                Developed "<a href="https://github.com/psobot/colourl" target="_blank">Colour of the Web</a>,"
+                a research project to find the average colour of the internet
+                <span class="grey">(Fall 2010, group of 2)</span>
+              </li>
             </ul>
-          </li>
-          <li>Focused on teaching and mentorship: led engineer onboarding bootcamp for new hires and mentored 7 engineers</li>
-          <li>Gave dozens of internal and external talks to other teams, companies, and conferences across three continents</li>
-          <li>Optimized core machine learning algorithms in C and made contributions to open source libraries <a href="https://github.com/spotify/annoy">Annoy</a> and <a href="https://github.com/spotify/scio">Scio</a></li>
-        </ul>
-        Senior Backend Engineer at <a href="https://www.spotify.com/" target="_blank">Spotify</a> <span class="grey">in New York, New York (May 2017-July 2019)</span><br />
-        <ul>
-          <li>Designed and implemented scalable backend services in Java for music recommendation and personalization</li>
-          <li>Built data pipelines in Scala and Python, processing hundreds of terabytes per day to serve 200m+ Spotify users</li>
-          <li>Won Spotify's internal company-wide hack week two years in a row (with projects sadly too secretive to list)</li>
-          <li>Led the Spotify NYC Musicians' club and ran bi-monthly <em>Friday Night Live</em> internal concert series</li>
-        </ul>
-        Senior Software Engineer III at <a href="https://www.pagerduty.com/" target="_blank">PagerDuty</a> <span class="grey">in Toronto, Canada (November 2016-April 2017)</span><br />
-				<ul>
-					<li>Provided technical direction, design input, mentorship and engineering work to Incident Management team</li>
-					<li>Authored and deployed code contributions to 34 projects in 10 languages (primarily Ruby, Javascript, and Swift)</li>
-          <li>
-          	Won 9 of 12 monthly engineering hack days in 2016 with projects including:
-          	<ul>
-          		<li><a href="https://www.pagerduty.com/blog/oncallselfie" target="_blank">#oncallselfie</a>, native Twitter integration for PagerDuty's iOS and Android apps</li>
-          		<li><a href="https://www.pagerduty.com/blog/features-html-emails" target="_blank">Rich HTML Email support</a> for hundreds of thousands of PagerDuty users</li>
-          		<li>Internal real-time display of outgoing notifications with Go, Kafka, WebSockets &amp; WebGL</li>
-          		<li>PagerDuty's <a href="https://itunes.apple.com/us/app/pagerduty/id594039512?mt=8" target="_blank">watchOS app</a> for displaying on-call status and scheduling on your wrist</li>
-          		<li><a href="https://www.pagerduty.com/blog/addition-revert-schedule/" target="_blank">Versioning and undo</a> for PagerDuty's on-call scheduling service</li>
-          	</ul>
-          </li>
-					<li>Fastest progression from entry-level to senior engineer in company history (21 months)</li>
-        </ul>
-        Software Engineer II at <a href="https://www.pagerduty.com/" target="_blank">PagerDuty</a> <span class="grey">in Toronto, Canada (October 2015-November 2016)</span><br />
-				<ul>
-					<li>Core contributor for product improvements on Workflow and Incident Management: Systems teams</li>
-					<li>Spearheaded efforts to increase overall throughput by 100x, enabling future customer growth</li>
-					<li>Mentored and onboarded 2 interns and 3 new full-time employees</li>
-        </ul>
-        Software Engineer I at <a href="https://www.pagerduty.com/" target="_blank">PagerDuty</a> <span class="grey">in Toronto, Canada (February 2015-October 2015)</span><br />
-				<ul>
-					<li>Helped ship core product enhancements including Incident Snooze and Incident Urgencies</li>
-          <li>Ensured reliability and uptime of PagerDuty by participating in primary on-call rotations</li>
-          <li>Sang in <a href="https://support.pagerduty.com/hc/en-us/articles/219534828">BarberDuty</a>, PagerDuty's <a href="https://twitter.com/mhoye/status/619169668738236417" target="_blank">on-call barbershop quartet</a> that wakes you up at night</li>
-        </ul>
-				Entrepreneur in Residence at <a href="http://www.twg.ca/" target="_blank">The Working Group</a> <span class="grey">in Toronto, Canada (June 2014-February 2015)</span><br />
-				<ul>
-					<li>Directed TWG Labs, a company division focused on experiments, learning and tools</li>
-  				<li>Managed a team of 3 developers on internet-of-things projects (Raspberry Pi, iBeacons, NodeJS and Heroku)</li>
-  				<li>Built bleeding-edge product prototypes for national Canadian brands including Tim Hortons</li>
-        </ul>
-				Founder &amp; Lead Developer at <a href="http://appstruments.com/" target="_blank">Appstruments</a> <span class="grey">in Toronto, Canada (2011-2014)</span>
-				<ul>
-          <li>Crafted viral music apps for the web, Android and iOS:</li>
-          	<ul>
-          		<li><em><a href="https://the.wubmachine.com/">the Wub Machine</a></em>, an automatic music remixer used to make nearly 4 million remixes</li>
-          		<li><em><a href="http://forever.fm/">forever.fm</a></em>, an endless, automatic &amp; beatmatched radio station</li>
-          	</ul>
-				</ul>
-        🎓 <span style="text-decoration: underline">Education</span>:<br />
-
-				Bachelor of Software Engineering (with distinction) from the <a href="http://www.uwaterloo.ca/">University of Waterloo</a> <span class="grey">(Graduated 2014)</span>
-				<ul>
-					<li>Built <a href="http://mixbox.io/">MixBox</a>, an iPad music remixing app based on the Echo Nest's <em>Remix</em> API</li>
-					<li>
-						Created JoosBox, a compiler for <a href="https://www.student.cs.uwaterloo.ca/~cs444/joos.html" target="_blank">a large subset of Java</a> in Scala <span class="grey">(Winter 2014, team of 3)</span><br />
-					</li>
-					<li>
-						"<a href="https://github.com/psobot/colourl" target="_blank">Colour of the Web</a>," finding the average colour of the internet <span class="grey">(Fall 2010, group of 2)</span><br />
-					</li>
-				</ul>
-				🎼 <span style="text-decoration: underline">Activities &amp; Interests</span>:<br />
-				<span class='small' style="line-height: 0.9em;">
-					<a href="http://music.petersobot.com/" target="_blank">
-						Music Composition, Performance, and Production (Drums, Bass, Guitar, Piano)
-					</a>•
-					<a href="http://music.petersobot.com/" target="_blank">
-						Electronic Music Production
-					</a>•
-					<a href="https://instagram.com/psobot">Photography</a> •
-					<a href="https://twitter.com/psobot">Weird Twitter</a> •
-					<a href="https://twitter.com/psobot">Regular Twitter</a> •
-					Hardware Hacking •
-					<a href="https://www.youtube.com/watch?v=5PHLJ7zppfo">Building Custom Game Boy Cartridges for Music Playback</a> •
-					Computer Security •
-					Socks •
-					Excessive Usage of 😀 Emoji and <span style="font-family: 'Comic Sans MS'">Comic Sans</span>
-				</span>
-				</ul>
-			</div>
-		</div>
-		<script type="text/javascript">
-			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-			try {
-			var pageTracker = _gat._getTracker("UA-6427057-4");
-			pageTracker._trackPageview();
-			} catch(err) {}
-		</script><script src="./index_files/ga.js" type="text/javascript"></script>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            🔬 <span style="text-decoration: underline">Patents</span>
+          </div>
+          <div class="section-contents">
+            <ul>
+              <li>
+                <a href="https://patents.google.com/patent/US20210201863A1/en" target="_blank">
+                  Method, System, and Computer-readable Medium for Creating Song Mashups
+                </a><span class="grey">(2019)</span>
+                <br />
+                <span class="grey">United States Patent #US20210201863A1</span><br />
+                <span class="grey">European Patent #EP3843083A1</span>
+              </li>
+              <li>
+                <a href="https://patents.google.com/patent/US10777177B1/en" target="_blank">
+                  Systems and methods for embedding data in media content
+                </a><span class="grey">(2019)</span>
+                <br />
+                <span class="grey">United States Patent #US10777177B1</span><br />
+                <span class="grey">European Patent #EP3799045A1</span>
+              </li>
+              <li>
+                <a href="https://patents.google.com/patent/US20200037019A1/en" target="_blank">
+                  Systems and Methods for Dynamic and Interactive Visualizations for Navigating Media Content
+                </a><span class="grey">(2018)</span>
+                <br />
+                <span class="grey">United States Patent #US20200037019A1</span><br />
+                <span class="grey">European Patent #EP3599557A1</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            🐙 <span style="text-decoration: underline">Selected Open-Source Projects</span>
+          </div>
+          <div class="section-contents">
+            <ul>
+              <li>
+                <a href="https://github.com/spotify/pedalboard"><em>Pedalboard</em></a>,
+                a Python library for high-performance audio effects (including VST/AU hosting)
+                <ul>
+                  <li>
+                    Designed and built at Spotify to provide faster data augmentation for training machine learning models
+                  </li>
+                  <li>
+                    Open-sourced to critical acclaim from the Python audio community, gaining 3,000 stars on GitHub in four months
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="https://github.com/psobot/keynote-parser"><span class="monospace">keynote-parser</span></a>,
+                a Python library for decoding (and re-encoding) Apple Keynote presentation files
+              </li>
+              <li>
+                <a href="https://github.com/psobot/MusicBoy"><em>MusicBoy</em></a>,
+                a hardware project to release an album on a custom Nintendo Game Boy® cartridge
+                <ul>
+                  <li>
+                    Built with Toronto-based electro-pop artist <a href="https://www.itspusher.com/">Pusher</a>, who provided music and artwork
+                  </li>
+                  <li>
+                    Based on <em>Super Mario Land</em>, plus an ARM-based coprocessor in the Game Pak to play back CD-quality audio
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/watch?v=5PHLJ7zppfo" target="_blank">Presented at !!con 2019</a> in New York City
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="https://github.com/psobot/samplescanner"><em>SampleScanner</em></a>,
+                a command-line app to convert hardware synthesizers into software instruments (VSTs)
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            📽 <span style="text-decoration: underline">Selected Talks and Presentations</span>
+          </div>
+          <div class="section-contents">
+            <ul class="compressed starry">
+              <li class="star">
+                <a href="https://www.youtube.com/watch?v=5PHLJ7zppfo" target="_blank">Even more vintage: releasing music on a custom-built Game Boy cartridge!</a>
+                <br>
+                <span class="grey">
+                  presented at <a href="http://bangbangcon.com/program.html" target="_blank">!!con</a> in NYC on May 12th, 2019
+                </span>
+              </li>
+              <li class="star">
+                <a href="https://www.youtube.com/watch?v=807uHC0Ia10" target="_blank">Music Recommendations at Scale with Cloud Bigtable</a>
+                <br>
+                <span class="grey">
+                  presented at <a href="https://cloud.withgoogle.com/next/sf/sessions?session=ARC205" target="_blank">Google Cloud Next</a> in San Francisco on April 9, 2019
+                </span>
+              </li>
+              <li class="star">
+                <a href="https://youtu.be/XfoQivKiEJM" target="_blank">The Recommendations Engine</a>
+                <br>
+                <span class="grey">
+                  presented at <a href="https://twg.io/blog/spotifys-peter-sobot-inside-discover-weekly/" target="_blank">The Working Group</a> in Toronto on October 12th, 2018
+                </span>
+              </li>
+              <li class="star">
+                <a href="https://www.youtube.com/watch?v=l3tkAbsJ_9U" target="_blank">Words Are Hard: Talking Good via Computer</a>
+                <br>
+                <span class="grey">
+                  presented at <a href="http://2017.cusec.net/speakers/" target="_blank">CUSEC 2017</a> in Montréal on January 13th, 2017
+                </span>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=WhXgpkQ8E-Q">How the Shazam audio fingerprinting algorithm works</a><br />
+                <span class="grey">
+                  presented at <a href="https://www.meetup.com/Papers-We-Love-Toronto/" target="_blank">Papers We Love Toronto</a> on September 2nd, 2015
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            🎼 <span style="text-decoration: underline">Activities &amp; Interests</span>
+          </div>
+          <div class="section-contents">
+            <span class='small' style="line-height: 0.9em;">
+              <a href="http://music.petersobot.com/" target="_blank">
+                Music Composition, Performance, and Production (Drums, Bass, Guitar, Piano)
+              </a>•
+              <a href="http://music.petersobot.com/" target="_blank">
+                Electronic Music Production
+              </a>•
+              <a href="https://instagram.com/psobot">Photography</a> •
+              <a href="https://twitter.com/psobot">Twitter</a> •
+              Painstakingly Emulating Obsolete Digital Synthesizers from the 90s as Software Instruments •
+              Video Production for Concerts •
+              Brunch •
+              Excessive Usage of <span style="font-family: 'Comic Sans MS'">Comic Sans</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      try {
+      var pageTracker = _gat._getTracker("UA-6427057-4");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script><script src="./index_files/ga.js" type="text/javascript"></script>
 </body></html>
