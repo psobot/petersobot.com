@@ -117,9 +117,24 @@
 			float: right;
 		}
 
-		marquee {
-			margin-bottom: -3px;
-		}
+               .scroll {
+                       margin-bottom: -3px;
+                       display: inline-block;
+                       overflow: hidden;
+                       position: relative;
+               }
+
+               .scroll span {
+                       display: inline-block;
+                       white-space: nowrap;
+                       padding-left: 100%;
+                       animation: scroll-text 6s linear infinite;
+               }
+
+               @keyframes scroll-text {
+                       from { transform: translateX(0); }
+                       to { transform: translateX(-100%); }
+               }
 
 		@keyframes moveBackground {
 			from {
@@ -147,8 +162,8 @@
 
 <body>
 	<div class="float-video">
-		<iframe width="100%" height="136" src="https://www.youtube.com/embed/xmLjd6X-d14?start=1154&showinfo=0" frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<iframe width="100%" height="136" src="https://www.youtube.com/embed/xmLjd6X-d14?start=1154&amp;showinfo=0" frameborder="0"
+allowfullscreen></iframe>
 		<p>
 			<em>So, You Want To Give A Talk - Five Ways To Keep Your Audience Off Of Their Phones</em>
 			<br />
@@ -189,6 +204,7 @@
 			<small>
 				<!-- &#x1F4BB; -->
 				Some of these projects include:
+</small>
 				<ul>
 					<li>
 						<a target="_blank" href="https://github.com/spotify/pedalboard"><em>&#x1F39B;&#xFE0F;&#x1F50A; Pedalboard</em></a>, the
@@ -206,7 +222,6 @@
 						Python library for working with Apple Keynote files
 					</li>
 				</ul>
-			</small>
 		</li>
 		<li>
 			<!-- &#x1F3BC; -->
@@ -244,9 +259,9 @@
 			<br />
 			<small>
 				use this to contact me for maximum
-				<marquee style='width: 140px;'>#brand #engagement</marquee>
+                                <span class='scroll' style='display:inline-block;width: 140px;overflow:hidden;'><span>#brand #engagement</span></span>
 				or to tell
-				<marquee style='width: 120px;'>&ldquo;fun internet jokes&rdquo;</marquee>
+                                <span class='scroll' style='display:inline-block;width: 120px;overflow:hidden;'><span>&ldquo;fun internet jokes&rdquo;</span></span>
 			</small>
 		</li>
 		<li>
@@ -295,7 +310,7 @@
 			<span class="small-and-grey">
 			    presented as a lightning talk at <a href="#" target="_blank">PyCon US</a> on May 17, 2025
 			</span>
-		    <p>
+		    </p>
 		</li>
 		<li class="star">
 		    <span class='date'>May 2025</span>
@@ -305,7 +320,7 @@
 			<span class="small-and-grey">
 			    at <a href="https://us.pycon.org/2025/schedule/presentation/115/" target="_blank">PyCon US</a> on May 16, 2025
 			</span>
-		    <p>
+		    </p>
 		</li>
 		<li>
 			<span class='date'>April 2025</span>
@@ -316,7 +331,7 @@
 					presented as a lightning talk at
 					<a href="#" target="_blank">PyTexas</a> on April 12th, 2025
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>May 2024</span>
@@ -342,7 +357,7 @@
 						href="https://youtu.be/xmLjd6X-d14?t=1154"
 						target="_blank">PyTexas</a> on April 20th, 2024
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>April 2024</span>
@@ -354,7 +369,7 @@
 						href="https://www.pytexas.org/2024/"
 						target="_blank">PyTexas</a> on April 20th, 2024
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>April 2023</span>
@@ -366,7 +381,7 @@
 						href="https://us.pycon.org/2023/"
 						target="_blank">PyCon US</a> on April 22nd, 2023
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>December 2022</span>
@@ -379,7 +394,7 @@
 						href="https://normconf.com"
 						target="_blank">NormConf</a> on December 15th, 2022
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>July 2022</span>
@@ -404,7 +419,7 @@
 						href="https://ep2022.europython.eu/session/working-with-audio-in-python-feat-pedalboard"
 						target="_blank">EuroPython</a> in Dublin on July 13th, 2022
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>April 2022</span>
@@ -417,7 +432,7 @@
 						NerdOut@Spotify podcast</a> on April
 					28th, 2022
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>May 2019</span>
@@ -429,7 +444,7 @@
 					presented at <a href="http://bangbangcon.com/program.html" target="_blank">!!con</a> in NYC on May
 					12th, 2019
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>April 2019</span>
@@ -441,7 +456,7 @@
 					presented at <a href="https://cloud.withgoogle.com/next/sf/sessions?session=ARC205"
 						target="_blank">Google Cloud Next</a> in San Francisco on April 9, 2019
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>October 2018</span>
@@ -452,7 +467,7 @@
 					presented at <a href="https://twg.io/blog/spotifys-peter-sobot-inside-discover-weekly/"
 						target="_blank">The Working Group</a> in Toronto on October 12th, 2018
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>January 2017</span>
@@ -464,7 +479,7 @@
 					presented at <a href="http://2017.cusec.net/speakers/" target="_blank">CUSEC 2017</a> in
 					Montr&eacute;al on January 13th, 2017
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>April 2016</span>
@@ -475,7 +490,7 @@
 					presented at <a href="http://xvzf.io/previously.html" target="_blank">xvzf.io: artifact, stories
 						about past lives</a> in Toronto on April 14th, 2016
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class="star">
 			<span class='date'>September 2015</span>
@@ -487,7 +502,7 @@
 					presented at <a href="http://www.meetup.com/Papers-We-Love-Toronto" target="_blank">Papers We Love
 						Toronto</a> on September 2nd, 2015
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>November 2014</span>
@@ -498,7 +513,7 @@
 					presented at <a href="https://bitmaker.co/" target="_blank">Bitmaker Labs</a> in Toronto on November
 					19th, 2014
 				</span>
-			<p>
+			</p>
 		</li>
 	</ul>
 
@@ -707,7 +722,7 @@
 				<span class="small-and-grey">
 					fast embedded nearest-neighbor search in Python and Java
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>December 2022</span>
@@ -717,7 +732,7 @@
 				<span class="small-and-grey">
 					a Python package for working with the Kurzweil&reg; K2000&reg;/K2500&reg;/K2600&reg; family of synthesizers
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>November 2022</span>
@@ -727,7 +742,7 @@
 				<span class="small-and-grey">
 					a cheap Arduino-based interface for Motorola&reg; ColdFire&trade; microcontrollers
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>September 2021</span>
@@ -737,7 +752,7 @@
 				<span class="small-and-grey">
 					the best Python library for working with audio (including VST/AU hosting)
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>January 2019</span>
@@ -747,7 +762,7 @@
 				<span class="small-and-grey">
 					a Python library for editing Apple Keynote files
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>September 2016 - April 2017</span>
@@ -757,7 +772,7 @@
 				<span class="small-and-grey">
 					custom nintendo game boy cartridge for audio playback
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>January 2016</span>
@@ -770,7 +785,7 @@
 				<span class="small-and-grey">
 					web-based proxy for phone-based apartment entry systems
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class="star">
 			<span class='date'>June 2015</span>
@@ -785,7 +800,7 @@
 						href="http://googleresearch.blogspot.co.uk/2015/06/inceptionism-going-deeper-into-neural.html">Google's
 						DeepDream</a> image processor
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>May 2015</span>
@@ -795,7 +810,7 @@
 				<span class="small-and-grey">
 					convert an outboard hardware MIDI instrument into a VST/Audio Unit
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>May 2015</span>
@@ -805,7 +820,7 @@
 				<span class="small-and-grey">
 					native Mac client for Google Hangouts (obsolete)
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>April 2015</span>
@@ -818,7 +833,7 @@
 					programmatic interface and extensions to <a href="https://www.koodomobile.com/"
 						target="_blank">Koodo Mobile</a>'s prepaid customer portal
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>February 2015</span>
@@ -828,7 +843,7 @@
 				<span class="small-and-grey">
 					display your Mac's current battery status in your terminal via &#x1F50B; and &#x1F50C; Emoji
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>September 2014</span>
@@ -839,7 +854,7 @@
 					financial calculator and estimator for <a href="https://uwaterloo.ca/software-engineering/"
 						target="_blank">Waterloo Software Engineering</a> students
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>October 2013</span>
@@ -850,7 +865,7 @@
 					Python logging handler that sends emails via <a href="http://postageapp.com/"
 						target="_blank">PostageApp</a>
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>July 2013</span>
@@ -860,7 +875,7 @@
 				<span class="small-and-grey">
 					graph your financial runway and find out when you need to get a real job
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>July 2013</span>
@@ -870,7 +885,7 @@
 				<span class="small-and-grey">
 					encrypt binary data into the spaces between words, for fun
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>March 2013</span>
@@ -880,7 +895,7 @@
 				<span class="small-and-grey">
 					keep social profile information consistent across services
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>March 2013</span>
@@ -890,7 +905,7 @@
 				<span class="small-and-grey">
 					upload batches of audio files as YouTube videos from the command line
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>March 2013</span>
@@ -900,7 +915,7 @@
 				<span class="small-and-grey">
 					write messages in your Github commit graph
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class="star">
 			<span class='date'>November 2012</span>
@@ -910,7 +925,7 @@
 				<span class="small-and-grey">
 					infinite stream of automatically DJ'd music
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>September 2012</span>
@@ -920,7 +935,7 @@
 				<span class="small-and-grey">
 					Waterloo JobMine email notifier
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>September 2012</span>
@@ -930,7 +945,7 @@
 				<span class="small-and-grey">
 					tiny email-based website uptime monitor
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>August 2012</span>
@@ -941,7 +956,7 @@
 					automatically crop images to their most visually interesting parts (<a
 						href="http://blog.petersobot.com/rewriting-in-cpp-for-fun-speed-and-masochism">blog post</a>)
 				</span>
-			<p>
+			</p>
 		</li>
 		<li>
 			<span class='date'>January 2012</span>
@@ -951,7 +966,7 @@
 				<span class="small-and-grey">
 					which of your friends said something on Facebook? (won Facebook@UWaterloo hackathon 2012)
 				</span>
-			<p>
+			</p>
 		</li>
 		<li class='star'>
 			<span class='date'>May 2011</span>
@@ -961,7 +976,7 @@
 				<span class="small-and-grey">
 					automagic dubstep remixer and temporary internet sensation
 				</span>
-			<p>
+			</p>
 		</li>
 	</ul>
 
