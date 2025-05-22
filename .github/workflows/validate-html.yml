@@ -1,0 +1,17 @@
+name: Validate HTML
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tidy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install tidy
+        run: sudo apt-get update && sudo apt-get install -y tidy
+      - name: Validate index.html
+        run: tidy -qe index.html
+      - name: Validate resume/index.html
+        run: tidy -qe resume/index.html
