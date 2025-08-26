@@ -3,7 +3,7 @@ repos:
     hooks:
       - id: html-tidy
         name: HTML Tidy Validation
-        entry: bash -c 'tidy -q -e "$@"'
+        entry: /usr/local/bin/tidy
         language: system
         types: [html]
         files: ^(index\.html|resume/index\.html)$
