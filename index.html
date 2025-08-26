@@ -5,14 +5,45 @@
 	<title>peter sobot dot com</title>
 	<meta name="description" content="beep boop. music, photos, software. new york.">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
 	<style type='text/css'>
+		@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
 		body {
 			margin: 20px;
-			font-family: "Comic Sans MS", "Helvetica Neue", sans-serif;
+			font-family: "Merriweather", "Helvetica Neue Light", "Arial", sans-serif;
+			color: #222;
+			line-height: 1.8em;
+			font-size: 1em;
+		}
+
+		h1 {
+			font-family: "Bungee Shade";
+			margin: 0;
+			font-size: 2.5em;
+			line-height: 1.2em;
+		}
+
+		h2 {
+			font-weight: 900;
+			font-size: 1.2em;
+			margin: 30px 0 15px 0;
+		}
+
+		a {
+			color: #333;
+			text-decoration: none;
+			border-bottom: 1px solid #ccc;
+		}
+
+		a:hover {
+			text-decoration: underline;
 		}
 
 		.float-video {
-			font-size: 13px;
+			font-size: 12px;
 		}
 
 		.float-video p {
@@ -25,35 +56,10 @@
 			color: #888;
 		}
 
-		@media screen and (min-width: 768px) {
-			body {
-				width: 740px;
-				margin: 20px auto;
-			}
-
-			.float-video {
-				float: right;
-				width: 240px;
-			}
-		}
-
 		blockquote {
 			font-style: italic;
-		}
-
-		a {
-			color: #66b;
-			text-decoration: none;
-		}
-
-		h1 a,
-		h2 a,
-		h3 a {
-			color: #337;
-		}
-
-		a:hover {
-			text-decoration: underline;
+			margin: 20px 0;
+			font-size: 1.1em;
 		}
 
 		body>ul>li {
@@ -93,15 +99,23 @@
 			content: "\2605";
 			margin-right: 0.4em;
 		}
-
+	
 		ul.starry li>a,
 		ul.starry li>p {
 			margin-left: 3px;
+			max-width: 300px;
 		}
 
-		ul.starry li.star>a,
+		ul.starry li.star>a {
+			margin-left: 0;
+			margin-right: 0;
+			max-width: 220px;
+		}
+
 		ul.starry li.star>p {
 			margin-left: 0;
+			margin-right: 0;
+			max-width: 290px;
 		}
 
 		small {
@@ -117,24 +131,24 @@
 			float: right;
 		}
 
-               .scroll {
-                       margin-bottom: -3px;
-                       display: inline-block;
-                       overflow: hidden;
-                       position: relative;
-               }
+		.scroll {
+			margin-bottom: -0.75em;
+			display: inline-block;
+			overflow: hidden;
+			position: relative;
+		}
 
-               .scroll span {
-                       display: inline-block;
-                       white-space: nowrap;
-                       padding-left: 100%;
-                       animation: scroll-text 6s linear infinite;
-               }
+		.scroll span {
+			display: inline-block;
+			white-space: nowrap;
+			padding-left: 100%;
+			animation: scroll-text 6s linear infinite;
+		}
 
-               @keyframes scroll-text {
-                       from { transform: translateX(0); }
-                       to { transform: translateX(-100%); }
-               }
+		@keyframes scroll-text {
+			from { transform: translateX(0); }
+			to { transform: translateX(-100%); }
+		}
 
 		@keyframes moveBackground {
 			from {
@@ -142,6 +156,41 @@
 			}
 			to {
 				background-position: 20px 20px;
+			}
+		}
+
+		ul {
+			padding: 0 0 0 25px;
+			margin: 0 0 20px 0;
+		}
+
+		li {
+			margin-bottom: 0.5em;
+		}
+		
+
+		@media screen and (min-width: 768px) {
+			body {
+				width: 740px;
+				margin: 20px auto;
+			}
+
+			.float-video {
+				float: right;
+				width: 240px;
+			}
+
+			ul.starry li>a,
+			ul.starry li>p {
+				margin-left: 3px;
+				max-width: 480px;
+			}
+
+			ul.starry li.star>a,
+			ul.starry li.star>p {
+				margin-left: 0;
+				margin-right: 0;
+				max-width: 490px;
 			}
 		}
 	</style>
@@ -228,6 +277,7 @@ allowfullscreen></iframe>
 			I play bass and drums in many New York-area bands, including
 			<a target="_blank" href="http://offbeatjazz.com">Off-Beat Jazz</a>,
 			<a target="_blank" href="https://www.instagram.com/combatbabiestheband">Combat Babies</a>,
+			<a target="_blank" href="https://www.instagram.com/offthebarbrass">Off The Bar Brass</a>,
 			and formerly <a target="_blank" href="http://newyacht.city">New Yacht City</a>.
 		</li>
 		<li>
@@ -238,8 +288,7 @@ allowfullscreen></iframe>
 		</li>
 		<li>
 			<!-- &#x1F5E3; -->
-			I post about software and music on <a rel="me" href="https://twitter.com/psobot">Twitter</a>
-                        and <a rel="me" href="https://bsky.app/profile/petersobot.com">Bluesky</a>.
+			I post about software and music on <a rel="me" href="https://twitter.com/psobot">Twitter</a>.
 		</li>
 		<li>
 			<!-- &#x270D; -->
@@ -262,14 +311,6 @@ allowfullscreen></iframe>
                                 <span class='scroll' style='display:inline-block;width: 140px;overflow:hidden;'><span>#brand #engagement</span></span>
 				or to tell
                                 <span class='scroll' style='display:inline-block;width: 120px;overflow:hidden;'><span>&ldquo;fun internet jokes&rdquo;</span></span>
-			</small>
-		</li>
-		<li>
-			<!-- &#x1F426; -->
-			<a target="_blank" href="https://mastodon.online/@psobot">psobot@mastodon.online</a>
-			<br />
-			<small>
-				use this to contact me about programming
 			</small>
 		</li>
 		<li>
