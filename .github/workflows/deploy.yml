@@ -11,7 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install tidy
-        run: sudo apt-get update && sudo apt-get install -y tidy
+        run: |
+          wget https://github.com/htacg/tidy-html5/releases/download/5.8.0/tidy-5.8.0-Linux-64bit.deb
+          sudo dpkg -i tidy-5.8.0-Linux-64bit.deb
+          sudo apt-get install -f -y
       - name: Verify HTML
         run: |
           tidy -q -e ./index.html
