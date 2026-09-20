@@ -19,6 +19,12 @@ jobs:
         run: |
           tidy -q -e ./index.html
           tidy -q -e ./resume/index.html
+      - name: Install emoji font for the PDF render
+        run: sudo apt-get install -y fonts-noto-color-emoji
+      - name: Render résumé PDF
+        run: |
+          make resume/index.pdf CHROME=google-chrome
+          test -s resume/index.pdf
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -29,6 +35,7 @@ jobs:
         run: |
           aws s3 cp ./index.html s3://com.petersobot/index.html
           aws s3 cp ./resume/index.html s3://com.petersobot/resume/index.html
+          aws s3 cp ./resume/index.pdf s3://com.petersobot/resume.pdf
       - name: Invalidate CloudFront cache
         env:
           CLOUDFRONT_DISTRIBUTION_IDS: ${{ secrets.CLOUDFRONT_DISTRIBUTION_IDS }}

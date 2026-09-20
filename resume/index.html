@@ -134,6 +134,18 @@
     .monospace {
       font-family: Inconsolata, 'Courier New', Courier, monospace;
     }
+
+    @media print {
+      .subsection,
+      .section-title,
+      li {
+        break-inside: avoid;
+      }
+
+      .section-title {
+        break-after: avoid;
+      }
+    }
   </style>
 </head>
 
@@ -155,7 +167,7 @@
 
     <div id="center">
       <div style="font-size: 1.1em">
-        Staff software engineer with a passion
+        Research engineer with a passion
         for scaling, optimization, teaching,
         mentorship, and reverse engineering.
       </div>
@@ -168,7 +180,7 @@
           </div>
           <div class="line">
             <span class="grey">Areas of Focus:</span>
-            Audio Processing, Machine Learning, Debugging, Performance Optimization, Open Source, Public Speaking
+            Audio Processing, Machine Learning, Generative AI, Debugging, Performance Optimization, Open Source, Public Speaking
           </div>
         </div>
       </div>
@@ -179,9 +191,33 @@
         <div class="section-contents">
           <div class="subsection">
             <div class="subsection-header">
+              Member of Technical Staff at
+              <a href="https://www.anthropic.com/" target="_blank">Anthropic</a>
+              <span class="grey">in New York, New York (August 2026-Present)</span>
+            </div>
+            <ul>
+              <li>Building infrastructure and tooling to improve the productivity of researchers and the outcomes of
+                their work</li>
+            </ul>
+          </div>
+          <div class="subsection">
+            <div class="subsection-header">
+              Senior Staff Machine Learning Engineer at
+              <a href="https://www.spotify.com/" target="_blank">Spotify</a>
+              <span class="grey">in New York, New York (May 2026-August 2026)</span>
+            </div>
+            <ul>
+              <li>Research engineering lead for Spotify's Artist-First AI Music Lab, building systems with generative AI
+                that benefit artists and their fans</li>
+              <li>Designed, built, and scaled Spotify's AI training systems and deployment infrastructure for generative
+                AI audio products</li>
+            </ul>
+          </div>
+          <div class="subsection">
+            <div class="subsection-header">
               Staff Machine Learning Engineer at
               <a href="https://www.spotify.com/" target="_blank">Spotify</a>
-              <span class="grey">in New York, New York (February 2020-Present)</span>
+              <span class="grey">in New York, New York (February 2020-May 2026)</span>
             </div>
             <ul>
               <li>Designed and built <strong><a href="https://github.com/spotify/pedalboard"
