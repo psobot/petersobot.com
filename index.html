@@ -1,19 +1,27 @@
-<!doctype html5>
+<!doctype html>
 <html>
 <head>
 	<title>peter sobot dot com</title>
 	<meta name="description" content="beep boop. music, photos, software. new york.">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400;1,900&amp;display=swap" rel="stylesheet" type="text/css">
 	<style type='text/css'>
 		@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
 
+		html {
+			/* Explicit background: embedded in an iframe (e.g. on X.com) the page
+			   would otherwise be transparent and show the host's dark theme. */
+			background: #fff;
+			color-scheme: light;
+		}
+
 		body {
 			margin: 20px;
 			font-family: "Merriweather", "Helvetica Neue Light", "Arial", sans-serif;
 			color: #222;
+			background: #fff;
 			line-height: 1.8em;
 			font-size: 1em;
 		}
@@ -21,7 +29,7 @@
 		h1 {
 			font-family: "Bungee Shade";
 			margin: 0;
-			font-size: 2.5em;
+			font-size: clamp(1.5em, 8vw, 2.5em);
 			line-height: 1.2em;
 		}
 
@@ -43,6 +51,14 @@
 
 		.float-video {
 			font-size: 12px;
+			line-height: 1.5;
+		}
+
+		.float-video iframe {
+			aspect-ratio: 16 / 9;
+			height: auto;
+			border: 0;
+			display: block;
 		}
 
 		.float-video p {
@@ -82,13 +98,11 @@
 		ul.starry li {
 			opacity: 0.75;
 			font-size: 0.75em;
-			margin-left: -0.1em;
-			padding-left: 0.25em;
 		}
 
 		ul.starry li.star {
 			list-style-type: none;
-			margin-left: -1.4em;
+			margin-left: 0;
 			opacity: 1;
 			font-size: 1em;
 			padding-left: 0;
@@ -96,33 +110,39 @@
 
 		ul.starry li.star:before {
 			content: "\2605";
-			margin-right: 0.4em;
+			position: absolute;
+			left: -1.2em;
 		}
 	
-		ul.starry li>a,
-		ul.starry li>p {
-			margin-left: 3px;
-			max-width: 300px;
-		}
-
-		ul.starry li.star>a {
-			margin-left: 0;
-			margin-right: 0;
-			max-width: 220px;
-		}
-
-		ul.starry li.star>p {
-			margin-left: 0;
-			margin-right: 0;
-			max-width: 290px;
+		ul.starry li {
+			position: relative;
+			padding-right: 8.75em;
 		}
 
 		small {
 			color: #888;
+			line-height: 1.4em;
+			display: inline-block;
+			margin-bottom: 1em;
+		}
+
+		small.block {
+			display: block;
+			margin: 0.5em 0 0;
+		}
+
+		/* Keeps a block at one width beside the floated video instead of
+		   wrapping around its bottom edge. */
+		.beside-float {
+			display: flow-root;
 		}
 
 		span.date {
-			float: right;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 8.25em;
+			text-align: right;
 			color: #888;
 		}
 
@@ -131,10 +151,11 @@
 		}
 
 		.scroll {
-			margin-bottom: -0.75em;
 			display: inline-block;
 			overflow: hidden;
 			position: relative;
+			vertical-align: bottom;
+			line-height: inherit;
 		}
 
 		.scroll span {
@@ -178,19 +199,38 @@
 				float: right;
 				width: 240px;
 			}
+		}
 
-			ul.starry li>a,
-			ul.starry li>p {
-				margin-left: 3px;
-				max-width: 480px;
+		@media screen and (max-width: 767px) {
+			body {
+				line-height: 1.6;
 			}
 
-			ul.starry li.star>a,
-			ul.starry li.star>p {
-				margin-left: 0;
-				margin-right: 0;
-				max-width: 490px;
+			.float-video {
+				display: none;
 			}
+
+			ul.starry li {
+				font-size: 1em;
+				line-height: 1.5;
+				padding-right: 100px;
+			}
+
+			ul.starry li span.date {
+				font-size: 12px;
+				line-height: 2;
+				width: 95px;
+			}
+
+			ul.compressed li {
+				margin-bottom: 12px;
+			}
+
+			.small-and-grey {
+				display: inline-block;
+				line-height: 1.5;
+			}
+
 		}
 	</style>
 
@@ -210,7 +250,7 @@
 
 <body>
 	<div class="float-video">
-		<iframe width="100%" height="136" src="https://www.youtube.com/embed/kpKrsFqJgXc?start=20&amp;showinfo=0" frameborder="0" allowfullscreen="true"></iframe>
+		<iframe width="100%" height="136" loading="lazy" src="https://www.youtube.com/embed/kpKrsFqJgXc?start=20&amp;showinfo=0" allowfullscreen="true"></iframe>
 		<p>
 			<em>Working with Audio in Python<br />(feat. Pedalboard)</em>
 			<br />
@@ -230,18 +270,24 @@
 	<ul>
 		<li>
 			<!-- &#x1F4BC; -->
-			I am a Member of Technical Staff at <a href="https://anthropic.com">Anthropic</a>, focused on research.
-			<br />
-			Prior to that, I was a senior staff machine learning engineer at <a href="https://spotify.com">Spotify</a> in New York City,
-			where I spent almost a decade building AI systems for music understanding.
-			<br />
-			<small>
-				Before that, I was a senior software engineer at <a target="_blank"
-					href="https://pagerduty.com">PagerDuty</a> in Toronto.<br />
-				My r&eacute;sum&eacute; is available for <a href="resume">viewing online</a> or <a
-					href="resume.pdf">printing</a>.
+			<div class="beside-float">
+			I am a member of technical staff at <a href="https://anthropic.com">Anthropic</a> in New York City, focused on research.
+			<small class="block">
+				Before that, I was a senior staff machine learning engineer at <a href="https://spotify.com">Spotify</a>
+				in New York City, where I spent almost a decade building AI systems for music understanding.
 			</small>
+			<small class="block">
+				Before <em>that</em>, I was a senior software engineer at <a target="_blank" href="https://pagerduty.com">PagerDuty</a>
+				in Toronto, where I built a little bit of everything.
+			</small>
+			<small class="block">
+				My r&eacute;sum&eacute; is available for <a href="resume">viewing online</a> or <a href="resume.pdf">printing</a>.
+			</small>
+			</div>
 		</li>
+    <li>
+      I am married to <a href="https://roguelynn.com">Lynn Root</a>. We live in New York City.
+    </li>
 		<li>
 			<!-- &#x2328; -->
 			I travel to places and <a href="#talks">talk about technology in front of large groups of people</a>.
@@ -279,6 +325,7 @@
 			<a target="_blank" href="http://offbeatjazz.com">Off-Beat Jazz</a>,
 			<a target="_blank" href="https://www.instagram.com/combatbabiestheband">Combat Babies</a>,
 			<a target="_blank" href="https://www.instagram.com/offthebarbrass">Off The Bar Brass</a>,
+      <a target="_blank" href="https://www.instagram.com/pigeonlandjazz">Pigeonland Jazz</a>,
 			and formerly <a target="_blank" href="http://newyacht.city">New Yacht City</a>.
 		</li>
 		<li>
@@ -327,23 +374,21 @@
 			<br />
 			<small>or <a target="_blank" href="mailto:updog@petersobot.com">updog@petersobot.com</a> if you're not
 				spambot</small>
-			<br />
-			<br />
-			<p style="margin: 0 -2em; padding: 2em; background: linear-gradient(45deg, yellow 25%, transparent 25%, transparent 50%, yellow 50%, yellow 75%, transparent 75%, transparent); background-size: 20px 20px; animation: moveBackground 1s linear infinite;">
-				<small>
-					<em style="color: black;">
-						<strong>Note</strong>: if you're trying to contact me about any Spotify-related projects,
-						send your email to <br />[first initial][last name] at [company name] dot com.<br />
-						<br />
-						<u>Emails to personal email accounts about Spotify-affiliated work are likely to be ignored.</u>
-					</em>
-				</small>
-			</p>
 		</li>
 	</ul>
 
 	<h2 id="talks"><a href="#talks">&#x1F4FD; talks &amp; presentations</a></h2>
 	<ul class="compressed starry">
+    <li class="star">
+      <span class='date'>May 2026</span>
+      <p>
+        <a href="#" target="_blank"><em>Flop</em>PyPI, the most secure Python package index</a>
+        <br />
+        <span class="small-and-grey">
+            presented as a lightning talk at <a href="#" target="_blank">PyCon US</a> on May 26, 2026 with <a href="https://sethmlarson.dev">Seth Larson</a>
+        </span>
+      </p>
+    </li>
 		<li class="star">
 		    <span class='date'>May 2025</span>
 		    <p>
